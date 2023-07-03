@@ -1,8 +1,8 @@
 'use client'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ethers } from 'ethers';
 import { abi } from './abi';
-import { Box } from '@chakra-ui/react';
+
 
 
 export default function Home() {
@@ -75,7 +75,7 @@ export default function Home() {
   }
 
   return (
-    <Box>
+    <>
       <div>
         <h1>SimpleStorage Contract Interaction</h1>
         <div>
@@ -84,12 +84,13 @@ export default function Home() {
             type="number"
             value={favoriteNumber}
             onChange={(e) => setFavoriteNumber(e.target.value)}
+            style={{ border: '1px solid black' }}
           />
-          <button onClick={storeFavoriteNumber}>Store</button>
+          <button onClick={storeFavoriteNumber} style={{ border: '1px solid black' }}>Store</button>
         </div>
         <div>
           <h2>Retrieve Favorite Number</h2>
-          <button onClick={retrieveFavoriteNumber}>Retrieve</button>
+          <button onClick={retrieveFavoriteNumber} style={{ border: '1px solid black' }}>Retrieve</button>
           <p>Stored Number: {storedNumber}</p>
         </div>
         <div>
@@ -99,14 +100,16 @@ export default function Home() {
             value={personName}
             onChange={(e) => setPersonName(e.target.value)}
             placeholder="Name"
+            style={{ border: '1px solid black' }}
           />
           <input
             type="number"
             value={personFavoriteNumber}
             onChange={(e) => setPersonFavoriteNumber(e.target.value)}
             placeholder="Favorite Number"
+            style={{ border: '1px solid black' }}
           />
-          <button onClick={addPerson}>Add</button>
+          <button onClick={addPerson} style={{ border: '1px solid black' }}>Add</button>
         </div>
         <div>
           <h2>Retrieve Favorite Number of a Person</h2>
@@ -115,13 +118,14 @@ export default function Home() {
             value={personName}
             onChange={(e) => setPersonName(e.target.value)}
             placeholder="Name"
+            style={{ border: '1px solid black' }}
           />
-          <button onClick={() => retrievePersonFavoriteNumber(personName)}>
+          <button onClick={() => retrievePersonFavoriteNumber(personName)} style={{ border: '1px solid black' }}>
             Retrieve
           </button>
           <p>Mapped Favorite Number: {mappedFavoriteNumber}</p>
         </div>
       </div>
-    </Box>
+      </>
   );
 }
