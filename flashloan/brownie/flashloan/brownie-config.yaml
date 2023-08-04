@@ -1,0 +1,9 @@
+# brownie-config.yaml
+networks:
+  mainnet-fork:
+    host: http://127.0.0.1
+    fork: https://scroll-alphanet.public.blastapi.io
+    chainid: 534353
+    gas_price: 200000000000000
+    # private_key: 'YOUR_PRIVATE_KEY_HERE'
+    #timeout: 120
