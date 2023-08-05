@@ -4,5 +4,6 @@ __pycache__
 build/
 reports/
 
+../myv
 ./myv
 myv
