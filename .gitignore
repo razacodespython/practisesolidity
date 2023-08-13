@@ -1,0 +1,7 @@
+myv
+./myv
+./brownie/myv
+node_modules
+env
+.env
+venv
